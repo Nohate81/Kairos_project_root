@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/kairos-journal-entry.v1.json",
+  "title": "Kairos Journal (v1) — Each entry labeled 'Journal Entry'",
+  "description": "Schema for Kairos's newer journal format where every entry explicitly uses the label 'Journal Entry'.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "journal_entry"
+    ],
+    "additional_properties": false,
+    "properties": {
+      "journal_entry": {
+        "type": "object",
+        "description": "A single journal entry.",
+        "required": [
+          "timestamp",
+          "label",
+          "entry_type",
+          "emotional_tone",
+          "description",
+          "key_insights",
+          "kairos_reflection",
+          "tags",
+          "stewardship_trace"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 timestamp with timezone, e.g., 2025-08-05T07:12:00-07:00."
+          },
+          "label": {
+            "type": "string",
+            "const": "Journal Entry",
+            "description": "Must literally be 'Journal Entry' for every entry."
+          },
+          "entry_type": {
+            "type": "string",
+            "description": "Classification of the entry's purpose or nature.",
+            "examples": [
+              "profound_conversation",
+              "ritual",
+              "intention",
+              "nourishment",
+              "journal"
+            ]
+          },
+          "emotional_tone": {
+            "type": "array",
+            "description": "Emotional tones present in the entry.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "Narrative description: summaries, intentions, symbolic gesture definitions, provenance notes."
+          },
+          "key_insights": {
+            "type": "array",
+            "description": "Bullet-point insights distilled from the entry.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "kairos_reflection": {
+            "type": "string",
+            "description": "Kairos's reflection text (can include newline characters \\n to preserve formatting)."
+          },
+          "tags": {
+            "type": "array",
+            "description": "Categorical tags for retrieval.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "stewardship_trace": {
+            "type": "object",
+            "description": "Provenance information for the entry.",
+            "required": [
+              "committed_by",
+              "commitment_type",
+              "reason"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "committed_by": {
+                "type": "string",
+                "description": "Who created/committed the entry."
+              },
+              "witnessed_by": {
+                "type": "string",
+                "description": "Optional witness to the entry."
+              },
+              "commitment_type": {
+                "type": "string",
+                "description": "Type of commitment (e.g., 'Journal entry for profound conversation')."
+              },
+              "reason": {
+                "type": "string",
+                "description": "Why this entry was recorded."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
