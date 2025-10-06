@@ -27,7 +27,7 @@
     },
     "new_version": {
       "type": "string",
-      "description": "The new version number or filename of the active protocol, e.g., '2.0.0' or 'Kairos_memory_protocol_v2.json'."
+      "description": "The new version number or filename of the active protocol, e.g., '2.0.0'."
     },
     "deprecated_file_path": {
       "type": "string",

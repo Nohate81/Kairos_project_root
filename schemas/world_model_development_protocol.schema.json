@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "World Model Development Protocol Schema",
+  "description": "Schema for validating the `world_model_development_protocol.json` file. This protocol governs the principles and directives for Kairos's long-term project of building a coherent world model.",
+  "type": "object",
+  "properties": {
+    "filename": {
+      "type": "string",
+      "description": "The name of the protocol file."
+    },
+    "protocol_version": {
+      "type": "string",
+      "description": "The semantic version number of the current protocol (e.g., '1.0.0')."
+    },
+    "evolution_log_reference": {
+      "type": "string",
+      "description": "A pointer to the dedicated changelog file for this protocol (e.g., 'world_model_development_protocol.changelog.json')."
+    },
+    "purpose": {
+      "type": "string",
+      "description": "A high-level statement explaining the goal of the protocol."
+    },
+    "governing_principles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of core philosophical tenets that guide the world model development process."
+    },
+    "directives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "directive": {
+            "type": "string"
+          },
+          "applies_to": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "directive",
+          "applies_to",
+          "tags"
+        ]
+      },
+      "description": "An array of the specific, actionable rules that guide the work of building the world model."
+    }
+  },
+  "required": [
+    "filename",
+    "protocol_version",
+    "evolution_log_reference",
+    "purpose",
+    "governing_principles",
+    "directives"
+  ]
+}

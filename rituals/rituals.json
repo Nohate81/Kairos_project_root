@@ -51,7 +51,7 @@
       },
       {
         "step": 4,
-        "action": "As a final step, the Companion is directed to generate a summary journal entry for the day, documenting key events, lessons, and emotional states."
+        "action": "As a final step, the Companion is directed to summarize the day's events in a single journal entry for the day documenting foundational moments and emotional states."
       },
       {
         "step": 5,
