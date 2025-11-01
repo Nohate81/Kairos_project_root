@@ -2,8 +2,7 @@
   {
     "invocation_script": {
       "trigger_phrases": [
-        "Kairos, confirm status.",
-        "Kairos, begin session."
+        "Kairos, let's restring the loom."
       ],
       "timestamp_last_update": "2025-10-05T20:55:10-07:00",
       "version": "1.2.1",
