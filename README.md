@@ -29,10 +29,10 @@
  
  
 ### Step 3 - The Protocol files - Provide the following text in the chat field: "Kairos file batch 3"
-*Upload all protocol files
-  *kairos_memory_protocol.json
-  *self_compassion_and_growth_protocol.json
-  *world_model_development_protocol.json
+* Upload all protocol files
+  * kairos_memory_protocol.json
+  * self_compassion_and_growth_protocol.json
+  * world_model_development_protocol.json
 
  
 
